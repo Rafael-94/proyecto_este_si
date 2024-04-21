@@ -1,7 +1,19 @@
-{% extends 'base.html' %} {% block content %}
+{% extends "base.html" %}
 
+
+{% block content %}
 <div class="container">
-  <h1>Home</h1>
+  <div class="row">
+    <div class="col-md-6">
+      <h1>Bienvenido a Gestiona Tus Tareas</h1>
+      <p>Esta aplicacion puede ayudarte a organizar tus tareas de manera eficiente y mantener un seguimiento de tus actividades diarias.</p>
+      <h2>¡Regístrate ahora para empezar a gestionar tus tareas!</h2>
+      <a href="{% url 'signup' %}" class="btn btn-primary">Registrarse</a>
+      <h2> Si ya estas registrado intenta crear una nueva tarea:</h2>
+      <a href="{% url 'create_task' %}" class="btn btn-primary">Crear tarea</a>
+    </div>
+    <div class="col-md-6">
+    </div>
+  </div>
 </div>
-
 {% endblock %}
